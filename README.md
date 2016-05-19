@@ -7,6 +7,7 @@ Licence: MIT
 
 
 HOW TO INSTALL
+
 1. Copy the files of "src" folder to -> yourofdir/addons/ofxAndroidExtendedEditText/src
 2. Copy the files of "scrJava/cc/openframeworks/ofxaddons/ofxandroidextendededittext" folder to -> yourofdir/examples/android/androidEmptyExample/srcJava/cc/openframeworks/ofxaddons/ofxandroidextendededittext
 3. Copy the files of "example" folder to -> yourofdir/examples/android/androidEmptyExample/src
@@ -15,6 +16,7 @@ HOW TO INSTALL
 6. Run
 
 HOW TO TEST
+
 1. Test for cancelling
 a. Run the given example. An EditText should appear on the screen with a hint value "Test EditText".
 b. See the logcat. On the logcat, you should see: isShown = 1, getText:"".
