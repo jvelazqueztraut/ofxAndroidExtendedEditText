@@ -11,7 +11,7 @@ Licence: MIT
 1. Copy the files of "src" folder to -> yourofdir/addons/ofxAndroidExtendedEditText/src
 2. Copy the files of "scrJava/cc/openframeworks/ofxaddons/ofxandroidextendededittext" folder to -> yourofdir/examples/android/androidEmptyExample/srcJava/cc/openframeworks/ofxaddons/ofxandroidextendededittext
 3. Copy the files of "example" folder to -> yourofdir/examples/android/androidEmptyExample/src
-4. Add ofxAndroidViews to the end of the file yourofdir/examples/android/androidEmptyExample/addons.make
+4. Add ofxAndroidExtendedEditText to the end of the file yourofdir/examples/android/androidEmptyExample/addons.make
 5. Clean&Build Project
 6. Run
 
