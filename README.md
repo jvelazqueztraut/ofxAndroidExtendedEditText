@@ -6,7 +6,7 @@ This is an openFrameworks addon that shows an Android EditText and keyboard on t
 Licence: MIT
 
 ----
-HOW TO INSTALL
+-- HOW TO INSTALL --
 
 1. Copy the files of "src" folder to -> yourofdir/addons/ofxAndroidExtendedEditText/src
 2. Copy the files of "scrJava/cc/openframeworks/ofxaddons/ofxandroidextendededittext" folder to -> yourofdir/examples/android/androidEmptyExample/srcJava/cc/openframeworks/ofxaddons/ofxandroidextendededittext
@@ -16,26 +16,20 @@ HOW TO INSTALL
 6. Run
 
 ----
-HOW TO TEST
+-- HOW TO TEST --
 
-1. Test for cancelling
+A. Test for cancelling
 
-a. Run the given example. An EditText should appear on the screen with a hint value "Test EditText".
+1. Run the given example. An EditText should appear on the screen with a hint value "Test EditText".
+2. See the logcat. On the logcat, you should see: isShown = 1, getText:"".
+3. Click Back button of the device. The EditText will disappear.
+4. Check the logcat again, you should see: isShown=0, getText="".
 
-b. See the logcat. On the logcat, you should see: isShown = 1, getText:"".
+B. Test for editing
 
-c. Click Back button of the device. The EditText will disappear.
-
-d. Check the logcat again, you should see: isShown=0, getText="".
-
-2. Test for editing
-
-a. Run the given example. An edittext should appear on the screen with a hint value "Test EditText".
-
-b. See the logcat. On the logcat, you should see: isShown = 1, getText:"".
-
-c. Click DONE button on the device screen. The EditText will disappear.
-
-d. Check the logcat again, you should see: isShown=0, getText="Test EditText".
+1. Run the given example. An edittext should appear on the screen with a hint value "Test EditText".
+2. See the logcat. On the logcat, you should see: isShown = 1, getText:"".
+3. Click DONE button on the device screen. The EditText will disappear.
+4. Check the logcat again, you should see: isShown=0, getText="Test EditText".
 (You can write something on the editor to see your own result)
 
