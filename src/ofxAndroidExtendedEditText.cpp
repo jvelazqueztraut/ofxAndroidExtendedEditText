@@ -16,7 +16,6 @@ std::string ofxAndroidExtendedEditText::lasteettext = "";
 
 
 ofxAndroidExtendedEditText::ofxAndroidExtendedEditText() {
-	eettext = "";
 	std::string javaClassName = "cc/openframeworks/ofxaddons/ofxandroidextendededittext/OFXAndroidExtendedEditText";
 	char *javaclassname = new char[javaClassName.size()+1];
 	strcpy(javaclassname, javaClassName.c_str());
@@ -52,8 +51,7 @@ void ofxAndroidExtendedEditText::remove() {
 
 
 std::string ofxAndroidExtendedEditText::getText() {
-	eettext = lasteettext;
-	return eettext;
+	return lasteettext;
 }
 
 

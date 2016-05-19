@@ -31,7 +31,6 @@ private:
 	jclass jclass_Eet;
 	jobject jinstance_Eet;
 	jmethodID jconstructor_Eet;
-	std::string eettext;
 };
 
 
