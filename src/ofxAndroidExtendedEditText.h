@@ -23,12 +23,11 @@ public:
 	std::string getText();
 	bool isShown();
 
+	//for internal use
 	static std::string lasteettext;
-	void update(ofEventArgs &e);
 
 
 private:
-	JNIEnv * env;
 	jclass jclass_Eet;
 	jobject jinstance_Eet;
 	jmethodID jconstructor_Eet;

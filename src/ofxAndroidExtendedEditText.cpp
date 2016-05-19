@@ -11,12 +11,12 @@
 #define NULL   ((void *) 0)
 #endif
 
+//for internal use
 std::string ofxAndroidExtendedEditText::lasteettext = "";
+
 
 ofxAndroidExtendedEditText::ofxAndroidExtendedEditText() {
 	eettext = "";
-
-	env = ofGetJNIEnv();
 	std::string javaClassName = "cc/openframeworks/ofxaddons/ofxandroidextendededittext/OFXAndroidExtendedEditText";
 	char *javaclassname = new char[javaClassName.size()+1];
 	strcpy(javaclassname, javaClassName.c_str());
@@ -25,13 +25,10 @@ ofxAndroidExtendedEditText::ofxAndroidExtendedEditText() {
 
     jconstructor_Eet = ofGetJNIEnv()->GetMethodID(jclass_Eet, "<init>", "()V");
 	jinstance_Eet = ofGetJNIEnv()->NewGlobalRef(ofGetJNIEnv()->NewObject(jclass_Eet, jconstructor_Eet));
-
-	ofAddListener(ofEvents().update, this, &ofxAndroidExtendedEditText::update);
 }
 
 
 ofxAndroidExtendedEditText::~ofxAndroidExtendedEditText() {
-	ofRemoveListener(ofEvents().update, this, &ofxAndroidExtendedEditText::update);
 	ofGetJNIEnv()->DeleteGlobalRef(jclass_Eet);
 	ofGetJNIEnv()->DeleteGlobalRef(jinstance_Eet);
 }
@@ -55,6 +52,7 @@ void ofxAndroidExtendedEditText::remove() {
 
 
 std::string ofxAndroidExtendedEditText::getText() {
+	eettext = lasteettext;
 	return eettext;
 }
 
@@ -63,10 +61,6 @@ bool ofxAndroidExtendedEditText::isShown() {
 	return ofGetJNIEnv()->CallBooleanMethod(jinstance_Eet, ofGetJNIEnv()->GetMethodID(jclass_Eet, "isShown", "()Z"));
 }
 
-
-void ofxAndroidExtendedEditText::update(ofEventArgs &e) {
-	eettext = lasteettext;
-}
 
 
 extern "C"{
