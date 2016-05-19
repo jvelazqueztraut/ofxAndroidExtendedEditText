@@ -1,7 +1,7 @@
 # ofxAndroidExtendedEditText
 Android EditText addon for openFrameworks
 
-This is an openFrameworks addon that shows an Android EditText and keyboard on the screen to enter some text value and to pass this value to openFrameworks environment.
+This is an openFrameworks addon, which shows an Android EditText and keyboard on the screen, to enter some text value and to pass this value to openFrameworks environment.
 
 Licence: MIT
 
