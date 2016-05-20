@@ -2,7 +2,8 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	eet.add("Test EditText");
+	eet = new ofxAndroidExtendedEditText();
+	eet->add("Test EditText");
 }
 
 //--------------------------------------------------------------
@@ -11,7 +12,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	ofLogNotice("ofApp.cpp") << "Is EditText Shown:" << eet.isShown() << ", getText:" << eet.getText();
+	ofLogNotice("ofApp.cpp") << "Is EditText Shown:" << eet->isShown() << ", getText:" << eet->getText();
 }
 
 //--------------------------------------------------------------

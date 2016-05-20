@@ -35,5 +35,5 @@ class ofApp : public ofxAndroidApp{
 		void cancelPressed();
 
 	private:
-		ofxAndroidExtendedEditText eet;
+		ofxAndroidExtendedEditText* eet;
 };
