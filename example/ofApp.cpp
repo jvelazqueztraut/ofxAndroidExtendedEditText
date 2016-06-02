@@ -2,7 +2,10 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+	//we need to initialize the addon before using it.
 	eet.initialize();
+
+	//we show the edit text on the screen. We could write this line into the touchUp() method as well.
 	eet.add("Test EditText");
 }
 
