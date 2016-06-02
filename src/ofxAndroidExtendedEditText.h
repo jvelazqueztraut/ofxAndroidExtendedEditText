@@ -16,6 +16,7 @@ class ofxAndroidExtendedEditText {
 public:
 	ofxAndroidExtendedEditText();
 	~ofxAndroidExtendedEditText();
+	void initialize();
 
 	void add();
 	void add(std::string hint);
@@ -28,9 +29,11 @@ public:
 
 
 private:
+	std::string javaClassName;
 	jclass jclass_Eet;
 	jobject jinstance_Eet;
 	jmethodID jconstructor_Eet;
+	bool isinitialized;
 };
 
 

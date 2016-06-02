@@ -16,7 +16,20 @@ std::string ofxAndroidExtendedEditText::lasteettext = "";
 
 
 ofxAndroidExtendedEditText::ofxAndroidExtendedEditText() {
-	std::string javaClassName = "cc/openframeworks/ofxaddons/ofxandroidextendededittext/OFXAndroidExtendedEditText";
+	javaClassName = "cc/openframeworks/ofxaddons/ofxandroidextendededittext/OFXAndroidExtendedEditText";
+	isinitialized = false;
+}
+
+
+ofxAndroidExtendedEditText::~ofxAndroidExtendedEditText() {
+	if (isinitialized) {
+		ofGetJNIEnv()->DeleteGlobalRef(jclass_Eet);
+		ofGetJNIEnv()->DeleteGlobalRef(jinstance_Eet);
+	}
+}
+
+
+void ofxAndroidExtendedEditText::initialize() {
 	char *javaclassname = new char[javaClassName.size()+1];
 	strcpy(javaclassname, javaClassName.c_str());
     jclass tmp = ofGetJNIEnv()->FindClass(javaclassname);
@@ -24,12 +37,8 @@ ofxAndroidExtendedEditText::ofxAndroidExtendedEditText() {
 
     jconstructor_Eet = ofGetJNIEnv()->GetMethodID(jclass_Eet, "<init>", "()V");
 	jinstance_Eet = ofGetJNIEnv()->NewGlobalRef(ofGetJNIEnv()->NewObject(jclass_Eet, jconstructor_Eet));
-}
 
-
-ofxAndroidExtendedEditText::~ofxAndroidExtendedEditText() {
-	ofGetJNIEnv()->DeleteGlobalRef(jclass_Eet);
-	ofGetJNIEnv()->DeleteGlobalRef(jinstance_Eet);
+	isinitialized = true;
 }
 
 
