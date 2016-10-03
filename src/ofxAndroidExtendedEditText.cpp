@@ -11,10 +11,6 @@
 #define NULL   ((void *) 0)
 #endif
 
-//for internal use
-std::string ofxAndroidExtendedEditText::lasteettext = "";
-
-
 ofxAndroidExtendedEditText::ofxAndroidExtendedEditText() {
 	javaClassName = "cc/openframeworks/ofxaddons/ofxandroidextendededittext/OFXAndroidExtendedEditText";
 	isinitialized = false;
