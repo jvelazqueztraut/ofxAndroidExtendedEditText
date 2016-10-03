@@ -28,7 +28,6 @@ ofxAndroidExtendedEditText::~ofxAndroidExtendedEditText() {
 	}
 }
 
-
 void ofxAndroidExtendedEditText::setup() {
 	char *javaclassname = new char[javaClassName.size()+1];
 	strcpy(javaclassname, javaClassName.c_str());
@@ -40,7 +39,6 @@ void ofxAndroidExtendedEditText::setup() {
 
 	isinitialized = true;
 }
-
 
 void ofxAndroidExtendedEditText::add(int x, int y) {
 	add("",x,y);
@@ -72,5 +70,3 @@ std::string ofxAndroidExtendedEditText::getText() {
 bool ofxAndroidExtendedEditText::isShown() {
 	return ofGetJNIEnv()->CallBooleanMethod(jinstance_Eet, ofGetJNIEnv()->GetMethodID(jclass_Eet, "isShown", "()Z"));
 }
-
-
